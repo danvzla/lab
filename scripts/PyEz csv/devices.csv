@@ -1,0 +1,4 @@
+hostname,trust_interface,trust_ip,admin_user,domain,ntp,dns,mgmtip
+fw1,ge-0/0/1,172.20.1.1/24,nocadmin,sv.edu.juniper.net,10.210.39.20,10.210.8.20,10.210.39.41
+fw2,ge-0/0/1,172.21.1.1/24,nocadmin,hq.edu.juniper.net,10.210.8.72,10.210.8.68,10.210.39.42
+fw3,ge-0/0/1,172.22.1.1/24,nocadmin,am.edu.juniper.net,10.210.8.73,10.210.8.69,10.210.39.43

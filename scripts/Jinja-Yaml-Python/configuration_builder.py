@@ -1,0 +1,24 @@
+
+import yaml
+from jinja2 import Template
+
+
+f=open('variables_build.yml')
+data=f.read()
+my_vars=yaml.load (data)
+f.close()
+ 
+#f2=open('configuration_builder/template_build.j2')
+f2=open('template_build.j2')
+s2=f2.read()
+template=Template(s2)
+f2.close()
+ 
+print 'building configuration files ...'
+for ex in my_vars:
+	print 'generate config file for device '+ex["host_name"]+' : conf_file_build_phase_'+ex["host_name"]+'.conf'
+	conffile=open('conf_file_build_phase_'+ex["host_name"]+'.conf','w')
+	conffile.write(template.render(ex))
+	conffile.close()
+print 'done'
+ 

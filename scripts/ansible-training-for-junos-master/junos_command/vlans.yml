@@ -1,0 +1,5 @@
+---
+vlans:
+ - name: red
+ - name: green
+ - name: blue

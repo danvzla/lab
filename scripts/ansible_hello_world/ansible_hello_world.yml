@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+    - wait_for: host={{ inventory_hostname }} port=830 timeout=5
+    - junos_get_facts:
+        host={{ inventory_hostname }}
+        user=root
+        passwd=abc123
+      register: junos
+    - debug: msg="{{ junos.facts }}"
+

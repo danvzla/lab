@@ -1,0 +1,16 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+  vars:
+    host: bazbazbaz
+  tasks:
+    - wait_for: host={{ inventory_hostname }} port=830 timeout=5
+    - template:
+        src=./templates/sethostname.j2
+        dest=./files/sethostname.set
+    - junos_install_config:
+        host={{ inventory_hostname }}
+        user=root
+        passwd=abc123
+        file=./files/sethostname.set

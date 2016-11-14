@@ -1,0 +1,34 @@
+admin@FR-EX2200-110> show configuration vlans | display set
+set vlans Vlan-3333 description "VLAN de test"
+set vlans Vlan-3333 vlan-id 3333
+set vlans default l3-interface vlan.0
+set vlans vlan-1001 vlan-id 1001
+set vlans vlan-1002 vlan-id 1002
+set vlans vlan-1003 vlan-id 1003
+set vlans vlan-1004 vlan-id 1004
+set vlans vlan-1005 vlan-id 1005
+set vlans vlan-101 vlan-id 101
+set vlans vlan-102 vlan-id 102
+set vlans vlan-103 vlan-id 103
+set vlans vlan-104 vlan-id 104
+set vlans vlan-109 description "Profile created as part of device discovery"
+set vlans vlan-109 vlan-id 109
+set vlans vlan-109 l3-interface vlan.109
+set vlans vlan-110 description "Vlan 172.30.110.0/24"
+set vlans vlan-110 vlan-id 110
+set vlans vlan-111 description "Vlan 172.30.111.0/24"
+set vlans vlan-111 vlan-id 111
+set vlans vlan-1111 vlan-id 1111
+set vlans vlan-150 vlan-id 150
+set vlans vlan-172
+set vlans vlan-173
+set vlans vlan-2001 vlan-id 2001
+set vlans vlan-2002 vlan-id 2002
+set vlans vlan-201 vlan-id 201
+set vlans vlan-201 l3-interface vlan.201
+set vlans vlan-202 vlan-id 202
+set vlans vlan-202 l3-interface vlan.202
+set vlan test vlan-id 1898
+
+{master:0}
+admin@FR-EX2200-110>
